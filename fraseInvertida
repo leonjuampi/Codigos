@@ -1,0 +1,25 @@
+package ej_302;
+
+import java.util.Scanner;
+
+public class Ej_302 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+       
+        String fraseInvertida = invertirCadena(frase);
+    
+        System.out.println("La frase invertida es: " + fraseInvertida);
+    }
+
+    private static String invertirCadena(String frase) {
+        
+        StringBuilder fraseInvertida = new StringBuilder(frase);
+        
+        fraseInvertida.reverse();
+        
+        return fraseInvertida.toString();
+    }
+}
