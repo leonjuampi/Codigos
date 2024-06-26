@@ -1,0 +1,71 @@
+package ej_304;
+
+import java.util.Scanner;
+
+public class Ej_304 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+
+        int numeroVocales = contarVocales(frase);
+        int numeroNoVocales = contarNoVocales(frase);
+
+        System.out.println("La frase tiene " + numeroVocales + " vocales.");
+        System.out.println("La frase tiene " + numeroNoVocales + " no vocales.");
+    }
+
+    private static int contarVocales(String frase) {
+        int contadorVocales = 0;
+
+        for (int i = 0; i < frase.length(); i++) {
+            String letra = frase.substring(i, i + 1);
+            if (esVocal(letra)) {
+                contadorVocales = contadorVocales + 1;
+            }
+        }
+        return contadorVocales;
+    }
+
+    private static int contarNoVocales(String frase) {
+        int contadorNoVocales = 0;
+
+        for (int i = 0; i < frase.length(); i++) {
+            String letra = frase.substring(i, i + 1);
+            if (noVocal(letra)) {
+                contadorNoVocales = contadorNoVocales + 1;
+            }
+        }
+        return contadorNoVocales;
+    }
+
+    private static boolean esVocal(String letra) {
+        switch (letra) {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                return true;
+            default:
+                return false;
+                
+        }
+
+    }
+
+    private static boolean noVocal(String letra) {
+        switch (letra) {
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                return false;
+            default:
+
+                return true;
+        }
+    }
+}
