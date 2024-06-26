@@ -1,0 +1,16 @@
+package ej_301;
+
+import java.util.Scanner;
+
+public class Ej_301 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una frase: ");
+        String contadorFrase = scanner.nextLine();
+       
+        int longitud = contadorFrase.length();
+
+        System.out.println("La frase tiene " + longitud + " caracteres.");
+    }
+}
