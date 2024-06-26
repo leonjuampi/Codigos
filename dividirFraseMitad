@@ -1,0 +1,26 @@
+package ej_303;
+
+import java.util.Scanner;
+
+public class Ej_303 {
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+        
+        int largoDeFrase = frase.length();
+        
+        int largo1raParte = largoDeFrase / 2;
+        
+        String primeraParte = frase.substring(0, largo1raParte);
+        String segundaParte = frase.substring(largo1raParte);
+        
+        System.out.println("La primera parte de la frase es: " + primeraParte);
+        System.out.println("La segunda parte de la frase es: " + segundaParte);
+        
+        
+    }
+    
+}
