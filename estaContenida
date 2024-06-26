@@ -1,0 +1,28 @@
+package ej_306;
+
+import java.util.Scanner;
+
+public class Ej_306 {
+
+    public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in);
+         
+        System.out.print("Ingrese el primer texto: ");
+        String texto1 = scanner.nextLine();
+
+        System.out.print("Ingrese el segundo texto: ");
+        String texto2 = scanner.nextLine();
+
+        String resultado = estaContenida(texto1, texto2);
+        System.out.println(resultado);
+    }
+
+    private static String estaContenida(String texto1, String texto2) {
+        if (texto1.contains(texto2)) {
+            return "El segundo texto esta contenido en el primero.";
+        } else {
+            return "El segundo texto no esta contenido en el primero.";
+        }
+    }
+}
+
