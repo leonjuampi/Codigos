@@ -1,0 +1,25 @@
+package ej_305;
+
+import java.util.Scanner;
+
+public class Ej_305 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una frase: ");
+        String frase = scanner.nextLine();
+
+        int numeroPalabras = contarPalabras(frase);
+        System.out.println("La frase tiene " + numeroPalabras + " palabras.");
+    }
+
+    private static int contarPalabras(String frase) {
+        int contadorPalabras = 0;
+
+        String[] palabras = frase.split(" ");
+
+        contadorPalabras = palabras.length;
+
+        return contadorPalabras;
+    }
+}
